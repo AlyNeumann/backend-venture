@@ -30,16 +30,28 @@ let museums = {
 
 let parks = {
     '1': {
-
+        name: 'Jeanne-Mance Park',
+        description: 'Climb the famous Mont Royal mountain, or just enjoy the view.',
+        coordinates: { lat: 45.515245, long: -73.583023},
+        address: 'Av du Parc & Avenue du Mont-Royal'
     },
     '2': {
-
+        name: 'Sir Wilfrid-Laurier Park',
+        description: 'Roomy park featuring an outdoor winning pool, playgrounds & ballfields, and free WIFI',
+        coordinates: { lat: 45.530053, long: -73.586840},
+        address: 'Mentana St & Avenue Laurier E'
     },
     '3': {
-
+        name: 'Parc du Portugal',
+        description: 'Small park with beautiful gazebo',
+        coordinates: { lat: 45.519062, long: -73.583885},
+        address: 'Marie-Anne St E & St Laurent Blvd'
     },
     '4': {
-
+        name: 'Parc des Amériques',
+        description: 'Small park, hosting site of the famous Montreal Fringe Festival',
+        coordinates: { lat: 45.518372, long: -73.581798},
+        address: 'Rue Rachel E & St Laurent Blvd'
     }
 
 }
@@ -60,16 +72,16 @@ let bars = {
             address: '3956 St Laurent Blvd'
         },
         '3': {
-            name: '',
-            description: '',
-            coordinates: { lat: 0, long: 0},
-            address: ''
+            name: 'Tokyo Bar',
+            description: 'This splashy, long-running nightspot has DJs, dancing, & cocktails featured on a hip terrace',
+            coordinates: { lat: 45.515077, long: -73.574579},
+            address: '3709 St Laurent Blvd'
         },
         '4': {
-            name: '',
-            description: '',
-            coordinates: { lat: 0, long: 0 },
-            address: ''
+            name: 'Buvette Chez Simone',
+            description: 'Convivial wine bar with rotating list of vintages & tapas in urban digs with moody lighting',
+            coordinates: { lat: 45.518822, long: -73.593503},
+            address: '4869 Park Ave'
         }
     },
     cheap: {

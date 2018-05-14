@@ -34,22 +34,34 @@ let asian = {
 let latinMex = {
     expensive: {
         '5': {
-            name: 'T&T Tacos et Tortas',
-            description: 'Mexican food & Cocktail/Wine Bar',
-            coordinates: { lat: 45.517468, long: -73.582390 },
-            address: '51 Rachel St W'
+            name: 'Casa Minhota',
+            description: 'Traditional Portuguese, select wine list & festive ambience',
+            coordinates: { at: 45.516516, long: -73.578135 },
+            address: '3959 St Laurent Blvd”'
+
         },
         '6': {
-
+            name: 'La Sala Rosa',
+            description: 'Eatery serving tapas and paellas, entertainment upstairs on select nights',
+            coordinates: { lat: 45.521849, long: -73.590429},
+            address: '4848 St Laurent Blvd'
 
         }
 
     },
     cheap: {
         '7': {
+            name: 'T&T Tacos et Tortas',
+            description: 'Mexican food & Cocktail/Wine Bar',
+            coordinates: { lat: 45.517468, long: -73.582390 },
+            address: '51 Rachel St W'
 
         },
         '8': {
+            name: 'Rotisserie Romados',
+            description: 'Montreals favourite Portuguese grilled chicken and sandwiches.',
+            coordinates: { lat: 5.519285, long: -73.580757 },
+            address: ''
 
         }
 
