@@ -34,22 +34,22 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let historical = parsed.historical;
     venture.sessionIdJoin(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical)
     res.send(console.log('that worked good job Aly!'))
-    //must call and send venture.firstOptions() and push to server state
+    //must call and send venture.firstOptions() (interests) and push to server state
 
 
 })
 
-//sends second round of choices
+//sends second round of choices (interests)
 app.get('/getSecondActivity', (req,res) => {
     //must call venture.secondOptions() and push to server state
 })
 
-//sends third round of choices (restaurant)
+//sends third round of choices (restaurants)
 app.get('/getThirdActivity', (req,res) => {
 //must call venture.thirdOptions() and push to server state
 })
 
-//sends fourth round of choices
+//sends fourth round of choices (interests)
 //sends back to welcome screen
 app.get('/getFourthActivity', (req,res) => {
 //must call venture.fourthOptions() and push to server state

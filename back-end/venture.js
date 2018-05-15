@@ -25,6 +25,17 @@ function sessionIdJoin({latinMexCheap, latinMexExpensive, asianCheap, asianExpen
     } 
 }
 
+//function to join interests based on the userPrefernces map
+function getInterests() {
+    let interests = userPreferences
+}
+
+//random array choice algorythm for reference
+// function choose(choices) {
+//     var index = Math.floor(Math.random() * choices.length);
+//     return choices[index];
+//   }
+
 //function to generate first two options
 //make temporary map that stores the options sent so the other functions don't use it later... no repeats!
 function firstOptions() {
