@@ -22,14 +22,32 @@ function sessionIdJoin({latinMexCheap, latinMexExpensive, asianCheap, asianExpen
     } 
 }
 
-//function to process options
-function checkOptions() {
+//function to generate first two options
+function firstOptions() {
 
 }
 
+//function to generate second two options 
+function secondOptions() {
+
+}
+
+//function to generate third/resto options
+function thirdOptions() {
+
+}
+
+//function to generate fourth options
+function fourthOptions() {
+
+} 
+
 module.exports = {
     userName,
-    checkOptions,
     genSessionId,
+    firstOptions,
+    secondOptions,
+    thirdOptions,
+    fourthOptions,
     sessionIdJoin
 }
