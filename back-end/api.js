@@ -28,9 +28,12 @@ app.get('/getThirdActivity', (req,res) => {
 
 })
 //sends fourth round of choices
+//sends back to welcome screen
 app.get('/getFourthActivity', (req,res) => {
 
 })
+
+
 
 
 app.listen(4000, () => console.log('Listening on port 4000!'))

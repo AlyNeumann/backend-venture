@@ -55,7 +55,6 @@ let parks = {
     }
 
 }
- //replace expensive bars with the correct list
 
 let bars = {
     expensive: {
@@ -111,6 +110,28 @@ let bars = {
         }
 
     }
+}
+
+let historical = {
+    '1': {
+        name: 'Leonard Cohens home',
+        description: 'The legendary singer/poets Montreal home',
+        coordinates: { lat: 45.519025, long: -73.583421},
+        address: '6 Rue Vallières'
+    },
+    '2': {
+        name: 'Mordecai Richler Gazebo',
+        description: 'The legendary Montreal authors tribute Gazebo',
+        coordinates: { lat: 45.513795, long: -73.585420},
+        address: '4060 Park Ave'
+    },
+    '3': {
+        name: 'Ancienne École des beaux-arts de Montréal',
+        description: 'Labyrinthic, dilapidated space full of history.',
+        coordinates: { lat: 45.511337, long: -73.570998},
+        address: '3450 St Urbain St'
+    }
+
 }
 
 
