@@ -9,14 +9,49 @@ app.use(express.static('public'))
 
 app.use(bodyParser.raw({ type: '*/*', limit: '50mb' }))
 
-/*End Points Here*/
+let serverState = {
+    firstOptions: [],
+    secondOptions: [],
+    thirdOptions: [],
+    fourthOptions: []
+}
 
-//Gets the username & session key
+
+//Gets the username & session id generated 
 app.get('/userName', (req, res) => {
-
+    let userName = req.query.userName
+    
 })
+
+//TODO:
+let userPreferences = {}
 //Receives the body of preferences & sends back first two choices
+//parse info coming from front, attach it to session ID so it can be references by other end poitns
 app.post('/userPreferenceFirstActivity', (req, res) => {
+    let parsed = JSON.parse(req.body.toString())
+
+    let latinMexCheap = parsed.latinMex.cheap;
+    let latinMexExpensive = parsed.latinMex.expensive;
+    let asianCheap = parsed.asian.cheap;
+    let asianExpensive = parsed.asian.expensive;
+    let barsExpensive = parsed.bars.expensive;
+    let barsCheap = parsed.bars.cheap;
+    let museums = parsed.museums;
+    let parks = parsed.parks;
+    let historical = parsed.historical;
+
+    let sessionId =  userPreferences[sessionID] = {
+        latinMexCheap, 
+        latinMexExpensive, 
+        asianCheap, 
+        asianExpensive,
+        barsExpensive,
+        barsCheap,
+        museums,
+        parks,
+        historical
+    }
+
 
 })
 //sends second round of choices
