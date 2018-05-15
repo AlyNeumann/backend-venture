@@ -19,12 +19,14 @@ let serverState = {
 
 //Gets the username & session id generated 
 app.get('/userName', (req, res) => {
+    //do we need this? should we save the session key with name?
     let userName = req.query.userName
+    venture.genSessionId(userName);
     
 })
 
 //TODO:
-let userPreferences = {}
+
 //Receives the body of preferences & sends back first two choices
 //parse info coming from front, attach it to session ID so it can be references by other end poitns
 app.post('/userPreferenceFirstActivity', (req, res) => {
@@ -39,18 +41,7 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let museums = parsed.museums;
     let parks = parsed.parks;
     let historical = parsed.historical;
-
-    let sessionId =  userPreferences[sessionID] = {
-        latinMexCheap, 
-        latinMexExpensive, 
-        asianCheap, 
-        asianExpensive,
-        barsExpensive,
-        barsCheap,
-        museums,
-        parks,
-        historical
-    }
+    venture.sessionIdJoin(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical)
 
 
 })
