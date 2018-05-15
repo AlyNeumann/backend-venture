@@ -1,6 +1,9 @@
 //this will be for the functions
 let userPreferences = {}
 
+//once a activity is used and sent to front, add it here so we don't repeat!
+let usedChoices = {}
+
 //for user name
 function genSessionId() {
     let sessionId = Math.floor(Math.random() * 10000000)
@@ -23,6 +26,7 @@ function sessionIdJoin({latinMexCheap, latinMexExpensive, asianCheap, asianExpen
 }
 
 //function to generate first two options
+//make temporary map that stores the options sent so the other functions don't use it later... no repeats!
 function firstOptions() {
 
 }
@@ -43,7 +47,6 @@ function fourthOptions() {
 } 
 
 module.exports = {
-    userName,
     genSessionId,
     firstOptions,
     secondOptions,
