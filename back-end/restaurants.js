@@ -70,7 +70,9 @@ let latinMex = {
 
 module.exports = {
     asianExpensive: asian.expensive,
+    asianCheap: asian.cheap,
     latinMexExpensive: latinMex.expensive,
+    latinMexCheap: latinMex.cheap
 }
 
 //const restaurants = require('./restaurants.js');

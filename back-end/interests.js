@@ -135,8 +135,11 @@ let historical = [
 ]
 
 module.exports = {
-    historical: historical,
-    barsExpensive: bars.expensive
+    museums: museums, 
+    parks: parks,
+    barsExpensive: bars.expensive,
+    barsCheap: bars.cheap,
+    historical: historical
 }
 
 //const interests = require('./interests.js');
