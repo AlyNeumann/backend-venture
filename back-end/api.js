@@ -38,10 +38,9 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     //remove the false booleans, left with two arrays of user preferences
     let restoChoices = venture.getInterests(userRestos)
     let interestChoices = venture.getInterests(userInterests)
-
-    res.send(venture.interestOptions(interestChoices))
-    //must call and send venture.firstOptions() (interests) and push to server state
-
+    let interestOptions = venture.interestOptions(interestChoices)
+    console.log(interestOptions)
+    res.send(JSON.stringify(interestOptions))
 
 })
 
