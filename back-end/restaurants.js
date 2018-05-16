@@ -67,3 +67,11 @@ let latinMex = {
 
     ]
 }
+
+module.exports = {
+    asianExpensive: asian.expensive,
+    latinMexExpensive: latinMex.expensive,
+}
+
+//const restaurants = require('./restaurants.js');
+// ['latinMexExpensive'].map(key => restaurants[key])

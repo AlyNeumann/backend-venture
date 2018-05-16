@@ -23,6 +23,8 @@ function sessionIdJoin({ latinMexCheap, latinMexExpensive, asianCheap, asianExpe
         parks,
         historical
     }
+    return userPreferences[sessionId]
+
 }
 
 //function to join interests based on the userPrefernces map

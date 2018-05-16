@@ -134,4 +134,10 @@ let historical = [
 
 ]
 
+module.exports = {
+    historical: historical,
+    barsExpensive: bars.expensive
+}
+
+//const interests = require('./interests.js');
 

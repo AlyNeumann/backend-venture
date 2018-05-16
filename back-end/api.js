@@ -32,7 +32,9 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let museums = parsed.museums;
     let parks = parsed.parks;
     let historical = parsed.historical;
-    venture.sessionIdJoin(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical)
+    let userPrefs = venture.sessionIdJoin(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical)
+    venture.getInterests(userPrefs)
+
     res.send(console.log('that worked good job Aly!'))
     //must call and send venture.firstOptions() (interests) and push to server state
 
