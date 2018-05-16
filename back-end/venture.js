@@ -10,24 +10,28 @@ function genSessionId() {
 }
 
 //joins sessionId to user preferences 
-function sessionIdJoin({latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical}) {
+function sessionIdJoin({ latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical }) {
     let sessionId = genSessionId();
     userPreferences[sessionId] = {
-        latinMexCheap, 
-        latinMexExpensive, 
-        asianCheap, 
+        latinMexCheap,
+        latinMexExpensive,
+        asianCheap,
         asianExpensive,
         barsExpensive,
         barsCheap,
         museums,
         parks,
         historical
-    } 
+    }
 }
 
 //function to join interests based on the userPrefernces map
-function getInterests() {
-    let interests = userPreferences
+function getInterests(userPrefs) {
+
+    let objectKeys = Object.keys(userPrefs)
+    return objectKeys.filter((key) => {
+        return userPrefs[key]
+    })
 }
 
 //random array choice algorythm for reference
@@ -55,7 +59,7 @@ function thirdOptions() {
 //function to generate fourth options
 function fourthOptions() {
 
-} 
+}
 
 module.exports = {
     genSessionId,
@@ -63,5 +67,6 @@ module.exports = {
     secondOptions,
     thirdOptions,
     fourthOptions,
-    sessionIdJoin
+    sessionIdJoin,
+    getInterests
 }
