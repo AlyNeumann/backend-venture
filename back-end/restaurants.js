@@ -75,5 +75,4 @@ module.exports = {
     latinMexCheap: latinMex.cheap
 }
 
-//const restaurants = require('./restaurants.js');
-// ['latinMexExpensive'].map(key => restaurants[key])
+

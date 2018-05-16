@@ -32,10 +32,14 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let museums = parsed.museums;
     let parks = parsed.parks;
     let historical = parsed.historical;
-    let userPrefs = venture.sessionIdJoin(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, barsExpensive, barsCheap, museums, parks, historical)
-    venture.getInterests(userPrefs)
+    //join session ids to user preferences, seperated into two maps
+    let userRestos = venture.sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive)
+    let userInterests = venture.sessionIdInterests(barsExpensive, barsCheap, museums, parks, historical)
+    //remove the false booleans, left with two arrays of user preferences
+    let restoChoices = venture.getInterests(userRestos)
+    let interestChoices = venture.getInterests(userInterests)
 
-    res.send(console.log('that worked good job Aly!'))
+    res.send(venture.interestOptions(interestChoices))
     //must call and send venture.firstOptions() (interests) and push to server state
 
 
@@ -43,18 +47,18 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
 
 //sends second round of choices (interests)
 app.get('/getSecondActivity', (req,res) => {
-    //must call venture.secondOptions() and push to server state
+    
 })
 
 //sends third round of choices (restaurants)
 app.get('/getThirdActivity', (req,res) => {
-//must call venture.thirdOptions() and push to server state
+//must call venture.restoOptions() and push to server state
 })
 
 //sends fourth round of choices (interests)
 //sends back to welcome screen
 app.get('/getFourthActivity', (req,res) => {
-//must call venture.fourthOptions() and push to server state
+
 })
 
 
