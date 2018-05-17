@@ -32,25 +32,25 @@ let parks = [
     {
         name: 'Jeanne-Mance Park',
         description: 'Climb the famous Mont Royal mountain, or just enjoy the view.',
-        coordinates: { lat: 45.515245, long: -73.583023},
+        coordinates: { lat: 45.515245, long: -73.583023 },
         address: 'Av du Parc & Avenue du Mont-Royal'
     },
     {
         name: 'Sir Wilfrid-Laurier Park',
         description: 'Roomy park featuring an outdoor winning pool, playgrounds & ballfields, and free WIFI',
-        coordinates: { lat: 45.530053, long: -73.586840},
+        coordinates: { lat: 45.530053, long: -73.586840 },
         address: 'Mentana St & Avenue Laurier E'
     },
     {
         name: 'Parc du Portugal',
         description: 'Small park with beautiful gazebo',
-        coordinates: { lat: 45.519062, long: -73.583885},
+        coordinates: { lat: 45.519062, long: -73.583885 },
         address: 'Marie-Anne St E & St Laurent Blvd'
     },
     {
         name: 'Parc des Amériques',
         description: 'Small park, hosting site of the famous Montreal Fringe Festival',
-        coordinates: { lat: 45.518372, long: -73.581798},
+        coordinates: { lat: 45.518372, long: -73.581798 },
         address: 'Rue Rachel E & St Laurent Blvd'
     }
 
@@ -58,10 +58,10 @@ let parks = [
 
 let bars = {
     expensive: [
-         {
+        {
             name: 'The Wiggle Room',
             description: 'Voted best cocktails in Montreal, nightly burlesque shows',
-            coordinates: { lat: 45.516096, long: -73.577712},
+            coordinates: { lat: 45.516096, long: -73.577712 },
             address: '3874 St Laurent Blvd'
         },
         {
@@ -73,13 +73,13 @@ let bars = {
         {
             name: 'Tokyo Bar',
             description: 'This splashy, long-running nightspot has DJs, dancing, & cocktails featured on a hip terrace',
-            coordinates: { lat: 45.515077, long: -73.574579},
+            coordinates: { lat: 45.515077, long: -73.574579 },
             address: '3709 St Laurent Blvd'
         },
         {
             name: 'Buvette Chez Simone',
             description: 'Convivial wine bar with rotating list of vintages & tapas in urban digs with moody lighting',
-            coordinates: { lat: 45.518822, long: -73.593503},
+            coordinates: { lat: 45.518822, long: -73.593503 },
             address: '4869 Park Ave'
         }
     ],
@@ -116,26 +116,26 @@ let historical = [
     {
         name: 'Leonard Cohens home',
         description: 'The legendary singer/poets Montreal home',
-        coordinates: { lat: 45.519025, long: -73.583421},
+        coordinates: { lat: 45.519025, long: -73.583421 },
         address: '6 Rue Vallières'
     },
     {
         name: 'Mordecai Richler Gazebo',
         description: 'The legendary Montreal authors tribute Gazebo',
-        coordinates: { lat: 45.513795, long: -73.585420},
+        coordinates: { lat: 45.513795, long: -73.585420 },
         address: '4060 Park Ave'
     },
     {
         name: 'Ancienne École des beaux-arts de Montréal',
         description: 'Labyrinthic, dilapidated space full of history.',
-        coordinates: { lat: 45.511337, long: -73.570998},
+        coordinates: { lat: 45.511337, long: -73.570998 },
         address: '3450 St Urbain St'
     }
 
 ]
 
 module.exports = {
-    museums: museums, 
+    museums: museums,
     parks: parks,
     barsExpensive: bars.expensive,
     barsCheap: bars.cheap,

@@ -58,6 +58,15 @@ function getSubsetInterest(interestsArr) {
     });
     return newArr;
 }
+function feelingLucky (data) {
+    newArr = []
+    Object.keys(data).forEach((EL,ID)=>{
+      interests[EL].forEach((el,id)=>{
+        newArr.push(el)
+      })
+    })
+    return newArr
+  }
 
 //TODO: look at above example
 function getSubsetResto(restosArr) {
