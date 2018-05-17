@@ -56,6 +56,7 @@ function getSubsetInterest(interestsArr) {
     return newArr;
 }
 
+//TODO: look at above example
 function getSubsetResto(restosArr) {
     return restosArr.map(restos => restaurants[restos])
    
@@ -80,7 +81,7 @@ function interestOptions(interestChoices) {
     return ret;
 }
 
-
+//TODO:
 //function to generate restaurant options (2 total)
 function restoOptions(restoChoices) {
     let restosArray = getSubsetResto(restoChoices)
@@ -102,10 +103,12 @@ function firstTwoInterests(x) {
     return firstChoices;
 }
 //get second two interest options to send to front
+//TODO: see above
 function secondTwoInterests() {
     let secondChoices = interestChoices.slice(2,4)
     return secondChoices;
 }
+//TODO:
 //get third two interests to send to front (fourth activity, last one after restos)
 function thirdTwoInterests() {
     let thirdChoices = interestChoices.slice(4,6)
