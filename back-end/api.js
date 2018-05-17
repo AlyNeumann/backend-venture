@@ -1,21 +1,13 @@
-const venture = require('./venture')
-const express = require('express')
-const app = express()
+const venture = require('./venture');
+const express = require('express');
+const app = express();
 
-const bodyParser = require('body-parser')
-const fs = require('fs')
+const bodyParser = require('body-parser');
+const fs = require('fs');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.use(bodyParser.raw({ type: '*/*', limit: '50mb' }))
-
-let serverState = {
-    firstOptions: [],
-    secondOptions: [],
-    thirdOptions: [],
-    fourthOptions: []
-}
-
+app.use(bodyParser.raw({ type: '*/*', limit: '50mb' }));
 
 
 //Receives the body of preferences & sends back first two choices
@@ -34,44 +26,47 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let historical = parsed.historical;
     let sessionId = venture.genSessionId();
     //join session ids to user preferences, seperated into two maps
-    let userRestos = venture.sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId)
-    let userInterests = venture.sessionIdInterests(barsExpensive, barsCheap, museums, parks, historical, sessionId)
+    let userRestos = venture.sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId);
+    let userInterests = venture.sessionIdInterests(barsExpensive, barsCheap, museums, parks, historical, sessionId);
     //remove the false booleans, left with two arrays of user preferences
-    let restoChoices = venture.getInterests(userRestos)
-    let interestChoices = venture.getInterests(userInterests)
+    let restoChoices = venture.getInterests(userRestos);
+    let interestChoices = venture.getInterests(userInterests);
+    let restoOptions = venture.restoOptions(restoChoices);
 
     //next two lines are to extract two interests to res.send to front
-    let interestOptions = venture.interestOptions(interestChoices, sessionId)
-    let firstTwoInterests = venture.firstTwoInterests(sessionId) 
-    res.send(JSON.stringify({ sessionId: sessionId, firstTwoInterests: firstTwoInterests }))
+    let interestOptions = venture.interestOptions(interestChoices, sessionId);
+    let firstTwoInterests = venture.firstTwoInterests(sessionId); 
+    res.send(JSON.stringify({ sessionId: sessionId, firstTwoInterests: firstTwoInterests }));
 
 })
 
 //sends second round of choices (interests)
 //TODO:
 app.get('/getSecondActivity', (req,res) => {
-    //query that has the sessionId to be used here as param for this function call
-    let secondTwoInterests = venture.secondTwoInterests(sessionId)
-    res.send(JSON.stringify(secondTwoInterests))
+    let sessionId = req.query.sessionId;
+    let secondTwoInterests = venture.secondTwoInterests(sessionId);
+    res.send(JSON.stringify(secondTwoInterests));
 })
 
 //sends third round of choices (restaurants)
-//TODO:
 app.get('/getThirdActivity', (req,res) => {
-  let restoOptions = venture.restoOptions(restoChoices) 
+    let sessionId = req.query.sessionId;
+    let restos = venture.getRestos(sessionId);
+    res.send(JSON.stringify(restos));
 })
 
 //sends fourth round of choices (interests)
 //sends back to welcome screen
-//TODO:
 app.get('/getFourthActivity', (req,res) => {
-
+    let sessionId = req.query.sessionId;
+    let lastTwoInterests = venture.lastTwoInterests(sessionId);
+    res.send(JSON.stringify(lastTwoInterests))
 })
 
 
 
 
-app.listen(4000, () => console.log('Listening on port 4000!'))
+app.listen(4000, () => console.log('Listening on port 4000!'));
 
 
 
