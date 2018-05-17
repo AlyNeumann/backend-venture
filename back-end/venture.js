@@ -49,31 +49,24 @@ function getInterests(x) {
 //what goes in as a parameter? where is this called?
 
 function getSubsetInterest(interestsArr) {
-    return interestsArr.map(interest => interests[interest])
+    let newArr = [];
+    interestsArr.forEach(interest => {
+        newArr = newArr.concat(interests[interest])
+    });
+    return newArr;
 }
 
-function getSubsetResto() {
-    let currentResto = []
-    if(restaurants.asianExpensive) {
-        currentResto.push(asianExpensive);
-    }
-    if(restaurants.asianCheap) {
-        currentResto.push(asianCheap);
-    }
-    if(restaurants.latinMexExpensive) {
-        currentResto.push(latinMexExpensive);
-    }
-    if(restaurants.latinMexCheap) {
-        currentResto.push(latinMexCheap)
-    }
-    return currentResto;
+function getSubsetResto(restosArr) {
+    return restosArr.map(restos => restaurants[restos])
+   
 }
 
 //function to generate interest options (6 total)
-//make temporary map that stores the options sent so the other functions don't use it later... no repeats!
 function interestOptions(interestChoices) {
     //how do we get result of getInterests function into the getSubsetInterest
+    console.log(interestChoices)
     let interestsArray = getSubsetInterest(interestChoices)
+    console.log(interestsArray)
     let numbersMap = {}
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = []
@@ -83,22 +76,40 @@ function interestOptions(interestChoices) {
         numbersMap[randomNumber] = true;
         ret.push(interestsArray[randomNumber])
     }
+    console.log(ret.length)
     return ret;
 }
 
+
 //function to generate restaurant options (2 total)
-function restoOptions() {
-    let restosArray = getSubsetResto()
+function restoOptions(restoChoices) {
+    let restosArray = getSubsetResto(restoChoices)
     let numbersMap = {}
     let randomNumber = Math.floor(Math.random() * restosArray.length);
     let ret = []
-
-    for (let i = 0; i >= 2; i++) {
+    if(restosArray.length < 2) return restosArray;
+    for (let i = 0; i < 2; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * restosArray.length);
         numbersMap[randomNumber] = true;
         ret.push(restosArray[randomNumber])
     }
     return ret;
+}
+
+//get first two interest options to send to front
+function firstTwoInterests(x) {
+    let firstChoices = x.slice(0,2)
+    return firstChoices;
+}
+//get second two interest options to send to front
+function secondTwoInterests() {
+    let secondChoices = interestChoices.slice(2,4)
+    return secondChoices;
+}
+//get third two interests to send to front (fourth activity, last one after restos)
+function thirdTwoInterests() {
+    let thirdChoices = interestChoices.slice(4,6)
+    return thirdChoices
 }
 
 
@@ -110,5 +121,8 @@ module.exports = {
     sessionIdInterests,
     getInterests,
     getSubsetInterest,
-    getSubsetResto
+    getSubsetResto,
+    firstTwoInterests,
+    secondTwoInterests,
+    thirdTwoInterests
 }

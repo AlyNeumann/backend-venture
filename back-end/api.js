@@ -38,9 +38,11 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     //remove the false booleans, left with two arrays of user preferences
     let restoChoices = venture.getInterests(userRestos)
     let interestChoices = venture.getInterests(userInterests)
+
+    //next two lines are to extract two interests to res.send to front
     let interestOptions = venture.interestOptions(interestChoices)
-    console.log(interestOptions)
-    res.send(JSON.stringify(interestOptions))
+    let firstTwoInterests = venture.firstTwoInterests(interestOptions) 
+    res.send(JSON.stringify(firstTwoInterests))
 
 })
 
@@ -51,7 +53,7 @@ app.get('/getSecondActivity', (req,res) => {
 
 //sends third round of choices (restaurants)
 app.get('/getThirdActivity', (req,res) => {
-//must call venture.restoOptions() and push to server state
+  // let restoOptions = venture.restoOptions(restoChoices) <---send this
 })
 
 //sends fourth round of choices (interests)
@@ -64,4 +66,6 @@ app.get('/getFourthActivity', (req,res) => {
 
 
 app.listen(4000, () => console.log('Listening on port 4000!'))
+
+
 
