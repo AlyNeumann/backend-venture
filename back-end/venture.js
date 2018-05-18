@@ -40,6 +40,8 @@ function sessionIdInterests(barsExpensive, barsCheap, museums, parks, historical
 
 }
 
+
+
 //will return an array of only the chosen interests (based on value of true)
 function getInterests(x) {
 
@@ -114,8 +116,8 @@ function interestOptions(interestChoices, sessionId) {
     let numbersMap = {};
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = [];
-    if (interestsArray.length < 6) return currentUserInterestsGenerated[sessionId] = interestsArray;
-    for (let i = 0; i < 6; i++) {
+    if (interestsArray.length < 8) return currentUserInterestsGenerated[sessionId] = interestsArray;
+    for (let i = 0; i < 8; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * interestsArray.length);
         numbersMap[randomNumber] = true;
         ret.push(interestsArray[randomNumber]);
@@ -162,11 +164,18 @@ function getRestos(sessionId) {
     return currentUserRestosGenerated[sessionId];
 }
 
+//if they don't pick any restos, send this 
+function thirdTwoInterests(sessionId) {
+    let x = currentUserInterestsGenerated[sessionId];
+    let thirdTwoInterests = x.slice(6, 8);
+    return thirdTwoInterests;
+}
+
 //get last two interests to send to front (fourth activity, last one after restos)
 function lastTwoInterests(sessionId) {
     let x = currentUserInterestsGenerated[sessionId];
-    let thirdChoices = x.slice(4, 6);
-    return thirdChoices;
+    let fourthChoices = x.slice(4, 6);
+    return fourthChoices;
 }
 
 
@@ -185,7 +194,9 @@ module.exports = {
     secondTwoInterests,
     lastTwoInterests,
     getRestos,
-    randomizeLucky
+    randomizeLucky,
+    currentUserRestosGenerated,
+    thirdTwoInterests
 }
 
 
