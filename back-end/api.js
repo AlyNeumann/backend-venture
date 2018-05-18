@@ -51,7 +51,7 @@ app.get('/getSecondActivity', (req,res) => {
 app.get('/getThirdActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let restos = venture.getRestos(sessionId);
-    res.send(JSON.stringify(restos));
+    res.send(JSON.stringify({sessionId, restos}));
 })
 
 //sends fourth round of choices (interests)
@@ -59,14 +59,14 @@ app.get('/getThirdActivity', (req,res) => {
 app.get('/getFourthActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let lastTwoInterests = venture.lastTwoInterests(sessionId);
-    res.send(JSON.stringify(lastTwoInterests));
+    res.send(JSON.stringify({sessionId, lastTwoInterests}));
 })
 
 //sends back 8 random options & sessionId is generated 
 app.get('/feelingLucky', (req,res) => {
     let sessionId = venture.genSessionId();
     let randomAdventure = venture.randomizeLucky(sessionId);
-    res.send(JSON.stringify(randomAdventure));
+    res.send(JSON.stringify({sessionId, randomAdventure}));
 })
 
 
