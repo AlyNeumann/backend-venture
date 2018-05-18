@@ -51,8 +51,9 @@ app.get('/getSecondActivity', (req,res) => {
 //sends third round of choices (restaurants)
 app.get('/getThirdActivity', (req,res) => {
     let sessionId = req.query.sessionId;
-    if(!venture.currentUserRestosGenerated){
-        return res.send(JSON.stringify(thirdTwoInterests(sessionId)))
+    console.log(sessionId)
+    if(!venture.currentUserRestosGenerated[sessionId]){
+        return res.send(JSON.stringify(venture.thirdTwoInterests(sessionId)))
     }
     let restos = venture.getRestos(sessionId);
     console.log("restos" + restos)
