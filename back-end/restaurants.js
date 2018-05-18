@@ -36,7 +36,7 @@ let latinMex = {
         {
             name: 'Casa Minhota',
             description: 'Traditional Portuguese, select wine list & festive ambience',
-            coordinates: { at: 45.516516, long: -73.578135 },
+            coordinates: { lat: 45.516516, long: -73.578135 },
             address: '3959 St Laurent Blvd”'
 
         },
