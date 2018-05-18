@@ -111,7 +111,7 @@ function randomizeLucky(sessionId) {
 //function to generate interest options (6 total)
 function interestOptions(interestChoices, sessionId) {
     let interestsArray = getSubsetInterest(interestChoices)
-    console.log(interestsArray)
+
     let numbersMap = {};
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = [];
@@ -161,7 +161,7 @@ function secondTwoInterests(sessionId) {
 //called in api.js to get the 2 restaurants
 function getRestos(sessionId) {
     console.log(currentUserRestosGenerated)
-    return currentUserRestosGenerated;
+    return currentUserRestosGenerated[sessionId];
 }
 
 //TODO:
