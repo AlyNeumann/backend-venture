@@ -31,7 +31,7 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     //remove the false booleans, left with two arrays of user preferences
     let restoChoices = venture.getInterests(userRestos);
     let interestChoices = venture.getInterests(userInterests);
-    let restoOptions = venture.restoOptions(restoChoices);
+    let restoOptions = venture.restoOptions(restoChoices, sessionId);
 
     //next two lines are to extract two interests to res.send to front
     let interestOptions = venture.interestOptions(interestChoices, sessionId);

@@ -58,15 +58,19 @@ function getSubsetInterest(interestsArr) {
     });
     return newArr;
 }
-function feelingLucky (data) {
-    newArr = []
-    Object.keys(data).forEach((EL,ID)=>{
-      interests[EL].forEach((el,id)=>{
-        newArr.push(el)
-      })
-    })
-    return newArr
-  }
+
+//restaurants and interests in seperately
+// function feelingLucky (data) {
+//     newArr = []
+//     Object.keys(data).forEach((EL,ID)=>{
+//       interests[EL].forEach((el,id)=>{
+//         newArr.push(el)
+//       })
+//     })
+//     return newArr
+//   }
+
+
 
 //TODO: look at above example
 function getSubsetResto(restosArr) {
@@ -94,7 +98,7 @@ function interestOptions(interestChoices, sessionId) {
 
 //TODO:
 //function to generate restaurant options (2 total)
-function restoOptions(restoChoices) {
+function restoOptions(restoChoices, sessionId) {
     let restosArray = getSubsetResto(restoChoices);
     console.log(restoChoices)
     let numbersMap = {};
