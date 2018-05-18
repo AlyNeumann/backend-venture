@@ -51,6 +51,7 @@ app.get('/getSecondActivity', (req,res) => {
 app.get('/getThirdActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let restos = venture.getRestos(sessionId);
+    console.log("restos" + restos)
     res.send(JSON.stringify({sessionId, restos}));
 })
 

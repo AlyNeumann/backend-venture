@@ -153,7 +153,7 @@ function secondTwoInterests(sessionId) {
     return secondChoices;
 }
 
-function getRestos() {
+function getRestos(sessionId) {
     return currentUserRestosGenerated;
 }
 
