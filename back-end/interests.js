@@ -37,7 +37,7 @@ let parks = [
     },
     {
         name: 'Sir Wilfrid-Laurier Park',
-        description: 'Roomy park featuring an outdoor winning pool, playgrounds & ballfields, and free WIFI',
+        description: 'Roomy park featuring an outdoor swinning pool, playgrounds & ballfields, and free WIFI',
         coordinates: { lat: 45.530053, long: -73.586840 },
         address: 'Mentana St & Avenue Laurier E'
     },

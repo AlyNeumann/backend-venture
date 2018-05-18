@@ -71,7 +71,6 @@ function getSubsetResto(restosArr) {
 
 // restaurants and interests in seperately
 function feelingLucky(data) {
-    console.log("data", data)
     newArr = [];
     Object.keys(data).forEach((EL, ID) => {
         data[EL].forEach((el, id) => {
@@ -126,7 +125,6 @@ function interestOptions(interestChoices, sessionId) {
 
 }
 
-//TODO:
 //function to generate restaurant options (2 total)
 function restoOptions(restoChoices, sessionId) {
     let restosArray = getSubsetResto(restoChoices);
@@ -164,7 +162,6 @@ function getRestos(sessionId) {
     return currentUserRestosGenerated[sessionId];
 }
 
-//TODO:
 //get last two interests to send to front (fourth activity, last one after restos)
 function lastTwoInterests(sessionId) {
     let x = currentUserInterestsGenerated[sessionId];
