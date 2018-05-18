@@ -60,6 +60,15 @@ function getSubsetInterest(interestsArr) {
     return newArr;
 }
 
+function getSubsetResto(restosArr) {
+    let newArr = [];
+    restosArr.forEach(resto => {
+        newArr = newArr.concat(restaurants[resto])
+    })
+    return newArr;
+}
+
+
 // restaurants and interests in seperately
 function feelingLucky(data) {
     console.log("data", data)
@@ -97,11 +106,7 @@ function randomizeLucky(sessionId) {
 }
 
 
-//TODO: look at above example
-function getSubsetResto(restosArr) {
-    return restosArr.map(restos => restaurants[restos]);
 
-}
 
 //function to generate interest options (6 total)
 function interestOptions(interestChoices, sessionId) {
@@ -153,7 +158,9 @@ function secondTwoInterests(sessionId) {
     return secondChoices;
 }
 
+//called in api.js to get the 2 restaurants
 function getRestos(sessionId) {
+    console.log(currentUserRestosGenerated)
     return currentUserRestosGenerated;
 }
 

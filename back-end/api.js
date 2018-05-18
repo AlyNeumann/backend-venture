@@ -44,6 +44,7 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
 app.get('/getSecondActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let secondTwoInterests = venture.secondTwoInterests(sessionId);
+    console.log(secondTwoInterests)
     res.send(JSON.stringify({ sessionId, secondTwoInterests}));
 })
 
