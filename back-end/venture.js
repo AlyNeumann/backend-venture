@@ -6,6 +6,7 @@ let userRestaurants = {};
 let userInterests = {};
 let currentUserInterestsGenerated = {};
 let currentUserRestosGenerated = {};
+let feelingLuckyOptions = {};
 
 
 //user session Id
@@ -15,7 +16,7 @@ function genSessionId() {
 }
 
 //joins sessionId to user restaurant preferences 
-function sessionIdRestos( latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId) {
+function sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId) {
     userRestaurants[sessionId] = {
         latinMexCheap,
         latinMexExpensive,
@@ -59,23 +60,47 @@ function getSubsetInterest(interestsArr) {
     return newArr;
 }
 
-//restaurants and interests in seperately
-// function feelingLucky (data) {
-//     newArr = []
-//     Object.keys(data).forEach((EL,ID)=>{
-//       interests[EL].forEach((el,id)=>{
-//         newArr.push(el)
-//       })
-//     })
-//     return newArr
-//   }
+// restaurants and interests in seperately
+function feelingLucky(data) {
+    console.log("data", data)
+    newArr = [];
+    Object.keys(data).forEach((EL, ID) => {
+        data[EL].forEach((el, id) => {
+            newArr.push(el)
+        })
+    })
+    return newArr;
+}
 
+//function to join lists
+function joinLucky() {
+    let allRestos = feelingLucky(restaurants);
+    let allInterests = feelingLucky(interests);
+    let allOptions = allRestos.concat(allInterests);
+    return allOptions;
+
+}
+
+//randomize lucky for 8 options
+function randomizeLucky(sessionId) {
+    let allChoices = joinLucky();
+    let numbersMap = {};
+    let randomNumber = Math.floor(Math.random() * allChoices.length);
+    let ret = [];
+    if (allChoices.length < 8) return feelingLuckyOptions[sessionId] = allChoices;
+    for (let i = 0; i < 8; i++) {
+        while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * allChoices.length);
+        numbersMap[randomNumber] = true;
+        ret.push(allChoices[randomNumber]);
+    }
+    return feelingLuckyOptions[sessionId] = ret
+}
 
 
 //TODO: look at above example
 function getSubsetResto(restosArr) {
     return restosArr.map(restos => restaurants[restos]);
-   
+
 }
 
 //function to generate interest options (6 total)
@@ -85,7 +110,7 @@ function interestOptions(interestChoices, sessionId) {
     let numbersMap = {};
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = [];
-    if(interestsArray.length < 6) return currentUserInterestsGenerated[sessionId] = interestsArray;
+    if (interestsArray.length < 6) return currentUserInterestsGenerated[sessionId] = interestsArray;
     for (let i = 0; i < 6; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * interestsArray.length);
         numbersMap[randomNumber] = true;
@@ -93,7 +118,7 @@ function interestOptions(interestChoices, sessionId) {
     }
     console.log(ret.length)
     return currentUserInterestsGenerated[sessionId] = ret;
-   
+
 }
 
 //TODO:
@@ -104,39 +129,39 @@ function restoOptions(restoChoices, sessionId) {
     let numbersMap = {};
     let randomNumber = Math.floor(Math.random() * restosArray.length);
     let ret = [];
-    if(restosArray.length < 2) return currentUserRestosGenerated[sessionId] = restosArray;
+    if (restosArray.length < 2) return currentUserRestosGenerated[sessionId] = restosArray;
     for (let i = 0; i < 2; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * restosArray.length);
         numbersMap[randomNumber] = true;
         ret.push(restosArray[randomNumber]);
     }
     return currentUserRestosGenerated[sessionId] = ret;
-   
+
 }
 
 //get first two interest options to send to front
 function firstTwoInterests(sessionId) {
     console.log(currentUserInterestsGenerated);
     let x = currentUserInterestsGenerated[sessionId];
-    let firstChoices = x.slice(0,2)
+    let firstChoices = x.slice(0, 2)
     return firstChoices;
 }
 //get second two interest options to send to front
 function secondTwoInterests(sessionId) {
     let x = currentUserInterestsGenerated[sessionId];
-    let secondChoices = x.slice(2,4);
+    let secondChoices = x.slice(2, 4);
     return secondChoices;
 }
 
 function getRestos() {
-    return currentUserRestosGenerated; 
+    return currentUserRestosGenerated;
 }
 
 //TODO:
 //get last two interests to send to front (fourth activity, last one after restos)
 function lastTwoInterests(sessionId) {
     let x = currentUserInterestsGenerated[sessionId];
-    let thirdChoices = x.slice(4,6);
+    let thirdChoices = x.slice(4, 6);
     return thirdChoices;
 }
 
@@ -155,7 +180,8 @@ module.exports = {
     firstTwoInterests,
     secondTwoInterests,
     lastTwoInterests,
-    getRestos
+    getRestos,
+    randomizeLucky
 }
 
 

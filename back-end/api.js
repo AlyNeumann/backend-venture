@@ -41,11 +41,10 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
 })
 
 //sends second round of choices (interests)
-//TODO:
 app.get('/getSecondActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let secondTwoInterests = venture.secondTwoInterests(sessionId);
-    res.send(JSON.stringify(secondTwoInterests));
+    res.send(JSON.stringify({ sessionId, secondTwoInterests}));
 })
 
 //sends third round of choices (restaurants)
@@ -60,9 +59,15 @@ app.get('/getThirdActivity', (req,res) => {
 app.get('/getFourthActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     let lastTwoInterests = venture.lastTwoInterests(sessionId);
-    res.send(JSON.stringify(lastTwoInterests))
+    res.send(JSON.stringify(lastTwoInterests));
 })
 
+//sends back 8 random options & sessionId is generated 
+app.get('/feelingLucky', (req,res) => {
+    let sessionId = venture.genSessionId();
+    let randomAdventure = venture.randomizeLucky(sessionId);
+    res.send(JSON.stringify(randomAdventure));
+})
 
 
 
