@@ -97,8 +97,8 @@ function randomizeLucky(sessionId) {
     let numbersMap = {};
     let randomNumber = Math.floor(Math.random() * allChoices.length);
     let ret = [];
-    if (allChoices.length < 8) return feelingLuckyOptions[sessionId] = allChoices;
-    for (let i = 0; i < 8; i++) {
+    if (allChoices.length < 4) return feelingLuckyOptions[sessionId] = allChoices;
+    for (let i = 0; i < 4; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * allChoices.length);
         numbersMap[randomNumber] = true;
         ret.push(allChoices[randomNumber]);
@@ -117,7 +117,7 @@ function interestOptions(interestChoices, sessionId) {
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = [];
     if (interestsArray.length < 8) return currentUserInterestsGenerated[sessionId] = interestsArray;
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * interestsArray.length);
         numbersMap[randomNumber] = true;
         ret.push(interestsArray[randomNumber]);
