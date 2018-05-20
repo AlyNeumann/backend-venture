@@ -13,7 +13,21 @@ let asian = {
             description: 'Puisqu’on ne fait rien d’ordinaire, nos Itamae ont revisité les sushis incontournables en leur ajoutant leur touche de créativité ; les subtilités de ces indispensables vous feront craquer.',
             coordinates: { lat: 45.518845, long: -73.587720 },
             address: '101 Mont-Royal Ave W'
-        }]
+        },
+        {
+            name: 'Kinoya Izakaya',
+            description: 'A Izakaya, a Japanese pub, combining the traits of a bar and a restaurant, serves drinks and tapas style food that are best  enjoyed by sharing.',
+            coordinates: { lat: 45.521963, long: -73.579212},
+            address: '4250 St Denis St'
+
+        },
+        {
+            name: 'Big in Japan',
+            description: 'Casual Japanese brasserie, serving up hearty comfort fare, sandwiches & desserts, plus beer & sake.',
+            coordinates: { lat: 45.515097, long: -73.574830},
+            address: '3723 St Laurent Blvd'
+        }
+    ]
     ,
     cheap: [
         {
@@ -27,6 +41,19 @@ let asian = {
             description: 'Extensive menu of creative sushi rolls (some in soy-paper wraps) & miso soups to take away.',
             coordinates: { lat: 45.520494, long: -73.586166 },
             address: '23 Mont-Royal Ave E'
+        },
+        {
+            name: 'Noren',
+            description: 'Cozy and casual Japanese restaurant with vegetarian options.',
+            coordinates: { lat: 45.517157, long: -73.582692},
+            address: '77 Rachel St W'
+        },
+        {
+            name: 'Chez Mein',
+            description: 'Best 2$ you will ever spend!',
+            coordinates: { lat: 45.515057, long: -73.575469},
+            address: '3766 St Laurent Blvd'
+             
         }
     ]
 }
@@ -46,6 +73,18 @@ let latinMex = {
             coordinates: { lat: 45.521849, long: -73.590429 },
             address: '4848 St Laurent Blvd'
 
+        },
+        {
+            name: 'Los Planes Gourmet',
+            description: 'late-night Salvadoran food, cosy environment',
+            coordinates: { lat: 45.521407, long: -73.576809},
+            address: '4115 St Denis St' 
+        },
+        {
+            name: 'Pintxo',
+            description: 'Chef Alonso Ortiz’s inventive Basque bites & tasting menus in an art-filled room with fine wines.',
+            coordinates: { lat: 45.523257, long: -73.583348},
+            address: '330 Mont-Royal Ave E'
         }
 
     ],
@@ -60,8 +99,21 @@ let latinMex = {
         {
             name: 'Rotisserie Romados',
             description: 'Montreals favourite Portuguese grilled chicken and sandwiches.',
-            coordinates: { lat: 5.519285, long: -73.580757 },
+            coordinates: { lat: 45.519285, long: -73.580757 },
             address: ''
+
+        },
+        {
+            name: 'Arepera',        
+            description: 'Casual Venezuelan fare for vegans, meat eaters & gluten-free diners in a brightly painted space.',
+            coordinates: { lat: 45.514827, long: -73.571977},
+            address: '73 Rue Prince Arthur E'
+        },
+        {
+            name: 'Sabor Latino 2',
+            description: 'Specialty supermarket & eatery offering casual Latin American dishes like tacos, fajitas & arepas.',
+            coordinates: { lat: 45.519448, long: -73.584607},
+            address: '4387 St Laurent Blvd'
 
         }
 
