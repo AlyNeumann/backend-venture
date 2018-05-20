@@ -2,7 +2,7 @@
 
 let historical = [
     {
-        name: 'Leonard Cohens home',
+        name: 'Leonard Cohen\'s home',
         description: 'The legendary singer/poets Montreal home',
         coordinates: { lat: 45.519025, long: -73.583421 },
         address: '6 Rue Vallières'
