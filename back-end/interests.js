@@ -76,17 +76,20 @@ let parks = [
         description: "Cute lil' place, quaint for a jaunt",
         coordinates: { lat: 45.524327, long: -73.591727 },
         address: '149 Laurier Ave, H2T 1E7'
-    },{
+    },
+    {
         name: 'Square Saint Louis Montreal',
         description: 'Lovely parc of the square',
-        coordinates: { lat: 45.516789, long: -73.569351},
+        coordinates: { lat: 45.516789, long: -73.569351 },
         address: '312 Rue du Square Saint Louis,QC H2X 1A5'
-    },{
+    },
+    {
         name: 'Park la Fontaine',
         description: 'Trails, fields & ponds for paddleboating & skating, with both English- & French-style landscaping.',
         coordinates: { lat: 45.518926, long: -73.566867 },
         address: '1619 QC-138, QC H2L 3A7'
-    },{
+    },
+    {
         name: 'Parc des Carrières',
         description: 'Small park, lovely parc, for a lovely time',
         coordinates: { lat: 45.533932, long: -73.593468 },
@@ -173,6 +176,19 @@ let bars = {
             description: 'Convivial wine bar with rotating list of vintages & tapas in urban digs with moody lighting',
             coordinates: { lat: 45.518822, long: -73.593503 },
             address: '4869 Park Ave'
+        },
+        {
+            name: 'Mayfair Cocktail Bar',
+            description: 'Posh lounge with a Victorian-era vibe featuring fancy drinks & teas, plus oyster & champagne events.',
+            coordinates: { lat: 45.522533, long: -73.577705},
+            address: '451 Rue Rachel E'
+
+        },
+        {
+            name: 'Diese Onze Live Jazz Bar',
+            description: 'In a snug, romantic basement, this jazz club boasts live music nightly, plus a bistro menu.',
+            coordinates: { lat: 45.521407, long: -73.576809},
+            address: '4115 St Denis St A'
         }
     ],
     cheap: [
@@ -199,6 +215,32 @@ let bars = {
             description: 'Great service, awesome food, great prices and good selection of beer.',
             coordinates: { lat: 45.513410, long: -73.571244 },
             address: '3515 St Laurent Blvd'
+        },
+        {
+            name: 'Auprès de ma Blonde',
+            description: 'Late-night food, cozy, casual!',
+            coordinates: { lat: 45.519798 , long: -73.573130},
+            address: '3845 rue St Denis'
+        },
+        {
+            name: 'La Salon Daomé',
+            description: 'Laid-back nightclub with a roster of international DJs spinning electronic music, plus theme nights.',
+            coordinates: { lat: 45.521538, long: -73.585241},
+            address: '141 Mont-Royal Ave E'
+
+        },
+        {
+            name: 'Quai Des Brumes',
+            description: 'Quaint institution for local French literary events, blues & alternative bands & art shows.',
+            coordinates: { lat: 45.523949, long: -73.582529},
+            address: '4481 St Denis St'
+              
+        },
+        {
+            name: 'Réservoir',
+            description: 'Popular brewpub providing draft microbrews, global tapas with vegetarian options & a rooftop patio.',
+            coordinates: { lat: 45.517281, long: -73.579346},       
+            address: '9 Avenue Duluth E'
         }
 
     ]
