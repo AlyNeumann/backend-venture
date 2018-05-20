@@ -41,7 +41,7 @@ let historical = [
         description: '24,000-seat football stadium that hosts Alouettes & McGill Redmen games, plus a running track.',
         coordinates: { lat: 45.509493, long: -73.579775 },
         address: '475 Pine Ave W, QC H2W 1S4',
-        imageLocation: 'http://localhost:4000/images/PercivalStaidum.jpg'
+        imageLocation: 'http://localhost:4000/images/PercivalStadium.jpg'
     },
     {
         name: 'Monument to Sir George-Étienne Cartier',
