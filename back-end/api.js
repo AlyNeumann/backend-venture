@@ -52,7 +52,8 @@ app.get('/getSecondActivity', (req,res) => {
 app.get('/getThirdActivity', (req,res) => {
     let sessionId = req.query.sessionId;
     console.log(sessionId)
-    if(!venture.currentUserRestosGenerated[sessionId]){
+    console.log(venture.currentUserRestosGenerated[sessionId])
+    if(venture.currentUserRestosGenerated[sessionId].length === 0){
         return res.send(JSON.stringify(venture.thirdTwoInterests(sessionId)))
     }
     let restos = venture.getRestos(sessionId);

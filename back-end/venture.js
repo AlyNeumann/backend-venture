@@ -117,7 +117,7 @@ function interestOptions(interestChoices, sessionId) {
     let randomNumber = Math.floor(Math.random() * interestsArray.length);
     let ret = [];
     if (interestsArray.length < 8) return currentUserInterestsGenerated[sessionId] = interestsArray;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
         while (numbersMap[randomNumber]) randomNumber = Math.floor(Math.random() * interestsArray.length);
         numbersMap[randomNumber] = true;
         ret.push(interestsArray[randomNumber]);
@@ -166,6 +166,7 @@ function getRestos(sessionId) {
 
 //if they don't pick any restos, send this 
 function thirdTwoInterests(sessionId) {
+    console.log('thirdTwoInterests', sessionId, currentUserInterestsGenerated[sessionId])
     let x = currentUserInterestsGenerated[sessionId];
     let thirdTwoInterests = x.slice(6, 8);
     return thirdTwoInterests;
