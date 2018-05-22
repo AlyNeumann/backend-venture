@@ -137,6 +137,75 @@ let latinMex = {
     ]
 }
 
+let european = {
+    expensive:[
+        {
+            name: 'Au Pied de Cochon',
+            description: 'Chef Martin Picard’s hearty Québécois fare, starring foie gras & pork, served in a lively space.',
+            coordinates: { lat: 45.522136, long: -73.574369},
+            address: '536 Avenue Duluth E',
+            imageLocation: 'http://localhost:4000/images/AuPiedDeCochon.jpg'
+
+        },
+        {
+            name: 'L\'Académie',
+            description: 'Casual, BYOB chain spot offering Italian & French dishes, with mussel specials & a kids\' menu.',
+            coordinates: { lat: 45.520925, long: -73.575894},
+            address: '4051 St Denis St',
+            imageLocation: 'http://localhost:4000/images/Lacademie.jpg'
+        },
+        {
+            name: 'La Prunelle',
+            description:  'Seasonal & eclectic French fare in a BYOB venue with tasting menus, overlooking cobblestone streets.',
+            coordinates: { lat: 45.520087, long: -73.576625},
+            address:  '327 Avenue Duluth E',
+            imageLocation: 'http://localhost:4000/images/Prunelle.jpg'
+        },
+        {
+            name: 'Les Deux Gamins',
+            description: 'Bi-level, Parisian-style bistro offering updated French fare in a casual atmosphere.',
+            coordinates: { lat: 45.515472, long: -73.570962},
+            address: '170 Rue Prince Arthur E',
+            imageLocation: 'http://localhost:4000/images/LesDeuxGamins.jpg'
+
+        }
+    ],
+    cheap:[
+        {
+            name: 'La Banquise',
+            description: 'All-night diner for Québécois grub & local microbrews, with many poutine options & hefty breakfasts.',    
+            coordinates: { lat: 45.525304, long: -73.574703},
+            address: '994 Rue Rachel E',
+            imageLocation: 'http://localhost:4000/images/Banquis.jpg'
+        },
+        {
+            name: 'Pitarifique',
+            description: 'Delicious pitas, fries, and burgers win a casual setting.',
+            coordinates: { lat: 45.517782, long: -73.581721},
+            address: '4160 Boulevard Saint-Laurent',
+            imageLocation: 'http://localhost:4000/images/Pitarifique.jpg'
+              
+        },
+        {
+            name: 'Dirty Pizza',
+            description: 'Casual spot for poutines & hot dogs with many toppings, including pesto, bacon & jalapeño sauce.',
+            coordinates: { lat: 45.520516, long: -73.586150},
+            address: '25 Mont-Royal Ave E',
+            imageLocation: 'http://localhost:4000/images/DirtyPizza.jpg'
+        },
+        {
+            name: 'Amelia’s',
+            description: 'Classic & gourmet pizzas, along with hearty sandwiches & pasta, served in a comfy brick-walled cafe.',
+            coordinates: { lat: 45.510741, long: -73.572666},
+            address:'201 Milton St',
+            imageLocation: 'http://localhost:4000/images/Amelias.jpg'
+
+        }
+
+
+    ]
+}
+
 module.exports = {
     asianExpensive: asian.expensive,
     asianCheap: asian.cheap,
