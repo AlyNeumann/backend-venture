@@ -16,12 +16,14 @@ function genSessionId() {
 }
 
 //joins sessionId to user restaurant preferences 
-function sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId) {
+function sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, europeanExpensive, europeanCheap, sessionId) {
     userRestaurants[sessionId] = {
         latinMexCheap,
         latinMexExpensive,
         asianCheap,
-        asianExpensive
+        asianExpensive,
+        europeanExpensive,
+        europeanCheap
     }
     return userRestaurants[sessionId];
 

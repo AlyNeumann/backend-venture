@@ -210,7 +210,9 @@ module.exports = {
     asianExpensive: asian.expensive,
     asianCheap: asian.cheap,
     latinMexExpensive: latinMex.expensive,
-    latinMexCheap: latinMex.cheap
+    latinMexCheap: latinMex.cheap,
+    europeanExpensive: european.expensive,
+    europeanCheap: european.cheap
 }
 
 

@@ -22,6 +22,8 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let latinMexExpensive = parsed.latinMex.expensive;
     let asianCheap = parsed.asian.cheap;
     let asianExpensive = parsed.asian.expensive;
+    let europeanExpensive = parsed.european.expensive;
+    let europeanCheap = parsed.european.cheap;
     let barsExpensive = parsed.bars.expensive;
     let barsCheap = parsed.bars.cheap;
     let museums = parsed.museums;
@@ -29,7 +31,7 @@ app.post('/userPreferenceFirstActivity', (req, res) => {
     let historical = parsed.historical;
     let sessionId = venture.genSessionId();
     //join session ids to user preferences, seperated into two maps
-    let userRestos = venture.sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, sessionId);
+    let userRestos = venture.sessionIdRestos(latinMexCheap, latinMexExpensive, asianCheap, asianExpensive, europeanExpensive, europeanCheap, sessionId);
     let userInterests = venture.sessionIdInterests(barsExpensive, barsCheap, museums, parks, historical, sessionId);
     //remove the false booleans, left with two arrays of user preferences
     let restoChoices = venture.getInterests(userRestos);
