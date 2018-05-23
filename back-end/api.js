@@ -2,7 +2,7 @@ const venture = require('./venture');
 const express = require('express');
 const cors = require("cors");
 const app = express();
-
+let https = require('https') 
 
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -85,5 +85,14 @@ app.get('/feelingLucky', (req,res) => {
 
 app.listen(4000, () => console.log('Listening on port 4000!'));
 
+
+
+// at the bottom of your file
+try {
+var privateKey = fs.readFileSync('privkey.pem', 'utf8');
+ var certificate = fs.readFileSync('fullchain.pem', 'utf8');
+ var credentials = { key: privateKey, cert: certificate };
+ var httpsServer = https.createServer(credentials, app);
+} catch (err) { console.log(err) }
 
 

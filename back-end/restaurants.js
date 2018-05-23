@@ -7,7 +7,7 @@ let asian = {
             description: 'Rustic-chic bistro specializing in creative vegan sushi rolls & Japanese entrees.',
             coordinates: { lat: 45.518112, long: -73.569495 },
             address: '3609 St Denis St, Montreal, QC H2X 3L6',
-            imageLocation: 'http://localhost:4000/images/SushiMomo.jpg'
+            imageLocation: 'https://venturemtl.club/images/SushiMomo.jpg'
         
         },
         {
@@ -15,14 +15,14 @@ let asian = {
             description: 'Puisqu’on ne fait rien d’ordinaire, nos Itamae ont revisité les sushis incontournables en leur ajoutant leur touche de créativité ; les subtilités de ces indispensables vous feront craquer.',
             coordinates: { lat: 45.518845, long: -73.587720 },
             address: '101 Avenue du Mont-Royal O, Montréal, QC H2T 2S9',
-            imageLocation: 'http://localhost:4000/images/MitoSushi.jpg'
+            imageLocation: 'https://venturemtl.club/images/MitoSushi.jpg'
         },
         {
             name: 'Kinoya Izakaya',
             description: 'A Izakaya, a Japanese pub, combining the traits of a bar and a restaurant, serves drinks and tapas style food that are best  enjoyed by sharing.',
             coordinates: { lat: 45.521963, long: -73.579212},
             address: '4250 St Denis St, Montreal, QC H2J 2K8',
-            imageLocation: 'http://localhost:4000/images/KinoyaIzakaya.jpg'
+            imageLocation: 'https://venturemtl.club/images/KinoyaIzakaya.jpg'
 
         },
         {
@@ -30,7 +30,7 @@ let asian = {
             description: 'Casual Japanese brasserie, serving up hearty comfort fare, sandwiches & desserts, plus beer & sake.',
             coordinates: { lat: 45.515097, long: -73.574830},
             address: '3723 Boul St-Laurent, Montréal, QC H2X 2V7',
-            imageLocation: 'http://localhost:4000/images/BigInJapan.jpg'
+            imageLocation: 'https://venturemtl.club/images/BigInJapan.jpg'
         }
     ]
     ,
@@ -40,28 +40,28 @@ let asian = {
             description: 'Japanese soups, noodle dishes & sake in a casual setting with wooden touches & a wraparound counter.',
             coordinates: { lat: 45.518514, long: -73.583266 },
             address: '4274 Boul St-Laurent, Montréal, QC H2W 1Z3',
-            imageLocation: 'http://localhost:4000/images/RamenYa.jpg'
+            imageLocation: 'https://venturemtl.club/images/RamenYa.jpg'
         },
         {
             name: 'Ichi Sushi',
             description: 'Extensive menu of creative sushi rolls (some in soy-paper wraps) & miso soups to take away.',
             coordinates: { lat: 45.520494, long: -73.586166 },
             address: '23 Avenue du Mont-Royal E, Montréal, QC',
-            imageLocation: 'http://localhost:4000/images/IchiSushi.jpeg'
+            imageLocation: 'https://venturemtl.club/images/IchiSushi.jpeg'
         },
         {
             name: 'Noren',
             description: 'Cozy and casual Japanese restaurant with vegetarian options.',
             coordinates: { lat: 45.517157, long: -73.582692},
             address: '77 Rue Rachel O, Montréal, QC H2W 1G2',
-            imageLocation: 'http://localhost:4000/images/Noren.jpg'
+            imageLocation: 'https://venturemtl.club/images/Noren.jpg'
         },
         {
             name: 'Chez Mein',
             description: 'A Montreal classic. Best 2$ you will ever spend!',
             coordinates: { lat: 45.515057, long: -73.575469},
             address: '3766 Boul St-Laurent, Montréal, QC H2W 1X6',
-            imageLocation: 'http://localhost:4000/images/ChezMein.jpg'
+            imageLocation: 'https://venturemtl.club/images/ChezMein.jpg'
              
         }
     ]
@@ -74,7 +74,7 @@ let latinMex = {
             description: 'Traditional Portuguese, select wine list & festive ambience',
             coordinates: { lat: 45.516516, long: -73.578135 },
             address: '3959 Boul St-Laurent, Montréal, QC H2W 1Y4',
-            imageLocation: 'http://localhost:4000/images/CasaMinhota.jpg'
+            imageLocation: 'https://venturemtl.club/images/CasaMinhota.jpg'
 
         },
         {
@@ -82,7 +82,7 @@ let latinMex = {
             description: 'Eatery serving tapas and paellas, entertainment upstairs on select nights',
             coordinates: { lat: 45.521849, long: -73.590429 },
             address: '4848 Boul St-Laurent, Montréal, QC H2T 1R5',
-            imageLocation: 'http://localhost:4000/images/SalaRosa.jpg'
+            imageLocation: 'https://venturemtl.club/images/SalaRosa.jpg'
 
         },
         {
@@ -90,14 +90,14 @@ let latinMex = {
             description: 'late-night Salvadoran food, cosy environment',
             coordinates: { lat: 45.521407, long: -73.576809},
             address: '4115 St Denis St, Montreal, QC H2W 2M7',
-            imageLocation: 'http://localhost:4000/images/LosPlanesGourmet.jpg'
+            imageLocation: 'https://venturemtl.club/images/LosPlanesGourmet.jpg'
         },
         {
             name: 'Pintxo',
             description: 'Chef Alonso Ortiz’s inventive Basque bites & tasting menus in an art-filled room with fine wines.',
             coordinates: { lat: 45.523257, long: -73.583348},
             address: '330 Avenue du Mont-Royal E, Montréal, QC H2T 1P8',
-            imageLocation: 'http://localhost:4000/images/Pinxto.jpg'
+            imageLocation: 'https://venturemtl.club/images/Pinxto.jpg'
         }
 
     ],
@@ -107,7 +107,7 @@ let latinMex = {
             description: 'Mexican food & Cocktail/Wine Bar',
             coordinates: { lat: 45.517468, long: -73.582390 },
             address: '51 Rue Rachel O, Montréal, QC H2W 1G2',
-            imageLocation: 'http://localhost:4000/images/T&T.jpg'
+            imageLocation: 'https://venturemtl.club/images/T&T.jpg'
 
         },
         {
@@ -115,7 +115,7 @@ let latinMex = {
             description: 'Montreals favourite Portuguese grilled chicken and sandwiches.',
             coordinates: { lat: 45.519285, long: -73.580757 },
             address: '115 Rue Rachel E, Montréal, QC H2W 1C8',
-            imageLocation: 'http://localhost:4000/images/Romados.jpg'
+            imageLocation: 'https://venturemtl.club/images/Romados.jpg'
 
         },
         {
@@ -123,14 +123,14 @@ let latinMex = {
             description: 'Casual Venezuelan fare for vegans, meat eaters & gluten-free diners in a brightly painted space.',
             coordinates: { lat: 45.514827, long: -73.571977},
             address: '73 Rue Prince Arthur E, Montréal, QC H2X 2Y6',
-            imageLocation: 'http://localhost:4000/images/Arepera.jpg'
+            imageLocation: 'https://venturemtl.club/images/Arepera.jpg'
         },
         {
             name: 'Sabor Latino 2',
             description: 'Specialty supermarket & eatery offering casual Latin American dishes like tacos, fajitas & arepas.',
             coordinates: { lat: 45.519448, long: -73.584607},
             address: '4387 Boul St-Laurent, Montréal, QC H2W 1Z8',
-            imageLocation: 'http://localhost:4000/images/SaborLatino.jpg'
+            imageLocation: 'https://venturemtl.club/images/SaborLatino.jpg'
 
         }
 
@@ -144,7 +144,7 @@ let european = {
             description: 'Chef Martin Picard’s hearty Québécois fare, starring foie gras & pork, served in a lively space.',
             coordinates: { lat: 45.522136, long: -73.574369},
             address: '536 Avenue Duluth E, Montréal, QC H2L 1A9',
-            imageLocation: 'http://localhost:4000/images/AuPiedDeCochon.jpg'
+            imageLocation: 'https://venturemtl.club/images/AuPiedDeCochon.jpg'
 
         },
         {
@@ -152,21 +152,21 @@ let european = {
             description: 'Casual, BYOB chain spot offering Italian & French dishes, with mussel specials & a kids\' menu.',
             coordinates: { lat: 45.520925, long: -73.575894},
             address: '4051 St Denis St, Montreal, QC H2W 2M7',
-            imageLocation: 'http://localhost:4000/images/Lacademie.jpg'
+            imageLocation: 'https://venturemtl.club/images/Lacademie.jpg'
         },
         {
             name: 'La Prunelle',
             description:  'Seasonal & eclectic French fare in a BYOB venue with tasting menus, overlooking cobblestone streets.',
             coordinates: { lat: 45.520087, long: -73.576625},
             address:  '327 Avenue Duluth E, Montréal, QC H2W 1J1',
-            imageLocation: 'http://localhost:4000/images/Prunelle.jpg'
+            imageLocation: 'https://venturemtl.club/images/Prunelle.jpg'
         },
         {
             name: 'Les Deux Gamins',
             description: 'Bi-level, Parisian-style bistro offering updated French fare in a casual atmosphere.',
             coordinates: { lat: 45.515472, long: -73.570962},
             address: '170 Rue Prince Arthur E, Montréal, QC H2X 3B7',
-            imageLocation: 'http://localhost:4000/images/LesDeuxGamins.jpg'
+            imageLocation: 'https://venturemtl.club/images/LesDeuxGamins.jpg'
 
         }
     ],
@@ -176,14 +176,14 @@ let european = {
             description: 'All-night diner for Québécois grub & local microbrews, with many poutine options & hefty breakfasts.',    
             coordinates: { lat: 45.525304, long: -73.574703},
             address: '994 Rue Rachel E, Montréal, QC H2J 2J3',
-            imageLocation: 'http://localhost:4000/images/Banquis.jpg'
+            imageLocation: 'https://venturemtl.club/images/Banquis.jpg'
         },
         {
             name: 'Pitarifique',
             description: 'Delicious pitas, fries, and burgers win a casual setting.',
             coordinates: { lat: 45.517782, long: -73.581721},
             address: '4160 Boulevard Saint-Laurent, Montréal, QC H2W 1Y8',
-            imageLocation: 'http://localhost:4000/images/Pitarifique.jpg'
+            imageLocation: 'https://venturemtl.club/images/Pitarifique.jpg'
               
         },
         {
@@ -191,14 +191,14 @@ let european = {
             description: 'Casual spot for poutines & hot dogs with many toppings, including pesto, bacon & jalapeño sauce.',
             coordinates: { lat: 45.520516, long: -73.586150},
             address: '25 Mont-Royal Ave E, Montreal, QC H2T 1N4',
-            imageLocation: 'http://localhost:4000/images/DirtyPizza.jpg'
+            imageLocation: 'https://venturemtl.club/images/DirtyPizza.jpg'
         },
         {
             name: 'Amelia’s',
             description: 'Classic & gourmet pizzas, along with hearty sandwiches & pasta, served in a comfy brick-walled cafe.',
             coordinates: { lat: 45.510741, long: -73.572666},
             address:'201 Milton St, Montreal, QC H2X 1V5',
-            imageLocation: 'http://localhost:4000/images/Amelias.jpg'
+            imageLocation: 'https://venturemtl.club/images/Amelias.jpg'
 
         }
 
