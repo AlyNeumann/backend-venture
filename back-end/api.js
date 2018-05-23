@@ -82,8 +82,8 @@ app.get('/feelingLucky', (req,res) => {
 })
 
 
-
-app.listen(4000, () => console.log('Listening on port 4000!'));
+// HTTP on port 4040
+app.listen(4040, () => console.log('HTTP Listening on port 4040!'));
 
 
 
@@ -93,6 +93,7 @@ var privateKey = fs.readFileSync('privkey.pem', 'utf8');
  var certificate = fs.readFileSync('fullchain.pem', 'utf8');
  var credentials = { key: privateKey, cert: certificate };
  var httpsServer = https.createServer(credentials, app);
+ httpsServer.listen(4000, () => console.log('HTTPS Listening on port 4000!'));
 } catch (err) { console.log(err) }
 
 
