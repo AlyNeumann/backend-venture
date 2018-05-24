@@ -147,7 +147,7 @@ let museums = [
         description: 'A groovy art place for groovy peeps',
         coordinates: { lat: 45.533133, long: -73.595110 },
         address: '5720 St Andre St, Montreal, QC H2S 2K1',
-        imageLocation: 'https://venturemtl.club:4000/images/larthotheque.jpg'
+        imageLocation: 'https://venturemtl.club:4000/images/Larthotheque.jpg'
     },
     {
         name: 'Musée des pompiers de Montréal',
@@ -161,7 +161,7 @@ let museums = [
         description: "Community museum in a 1920s bathhouse, showcasing the area's working-class roots & labour history.",
         coordinates: { lat: 45.520179, long: -73.563753 },
         address: '2050 Rue Amherst, Montréal, QC H2L 3L8',
-        imageLocation: 'https://venturemtl.club:4000/images/Ecomusee.jpg'
+        imageLocation: 'https://venturemtl.club:4000/images/Ecomusee.JPG'
     },
     {
         name: 'Redpath Museum',
@@ -247,7 +247,7 @@ let bars = {
             description: 'Great service, awesome food, great prices and good selection of beer.',
             coordinates: { lat: 45.513410, long: -73.571244 },
             address: '3515 Boul St-Laurent, Montréal, QC H2X 2T6',
-            imageLocation: 'https://venturemtl.club:4000/images/McKibbins.jpg'
+            imageLocation: 'https://venturemtl.club:4000/images/Mckibbins.jpg'
         },
         {
             name: 'Auprès de ma Blonde',
